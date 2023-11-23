@@ -1,2 +1,2 @@
-# Big_Data_Master_in_Critical_Care
-Big Data Master in Critical Care
+# Big Data Master of Critical Care
+Big Data Master of Critical Care
