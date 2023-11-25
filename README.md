@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_logo.png" width="10%" height="10%" />
 </p>
+
 - 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的公开重症数据库（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC）、麻醉数据库（INSPIRE）等等关系型医学数据集的一键安装。部分数据库将含有独家的增强型BDMCC系列表单（类似于MIMIC数据库的Concepts功能），上述增强型表单已经移除官方Concepts存在的部分Bug并进行优化，配合R包`strong`包可极大提高数据处理效率。
 - 软件将覆盖支持Windows、macOS、Linux三平台，实现无论在设备操作系统下，均可以最快、最方便的方式完成对目标数据库的一键安装及后续的一键升级管理。
 - 本软件仅提供一键安装功能，不提供任何数据集的下载！安装所需的数据集请自行前往官网进行申请，请遵守数据使用协议，维护良好学术道德风尚。
