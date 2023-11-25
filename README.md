@@ -31,30 +31,39 @@
 ### 3.1 Windows系统下载安装说明
 - Windows系统仅支持Win10 2004及其后续版本（包括Win11）的X64架构，目前仅在Win10 22H2版本进行了测试。Windows系统查看版本的方法：按"Windows徽标键键"+"R"，并在“打开”框中键入“winver”，然后选择"确定"。如符合上述条件请下载安装`BDMCC_1.0.1_x64-setup.exe`。**请注意安装路径使用英文字母**。
 ### 3.2 macOS系统下载安装说明
-- macOS Intel与M1/M2系列芯片的设备在安装后首次启动BDMCC软件时均会提示:`无法打开BDMCC.app，因为无法验证开发者`。请单击“取消”并使用如下方法解决：
-  - 打开【终端】，在终端中输入下列代码，以开启“任何来源”。
-    	```bash
-		sudo spctl  --master-disable
-		```
+- macOS Intel与M1/M2系列芯片的设备在安装后首次启动BDMCC软件时均会提示:`无法打开BDMCC.app，因为无法验证开发者`。请单击【取消】并使用如下方法解决：
+
+    - 打开【终端】，在终端中输入下列代码，以开启“任何来源”。
+    ```bash
+    sudo spctl  --master-disable
+    ```
 		
-	- 单击选择菜单：接着打开【系统偏好设置】，选择【安全性与隐私】，选择【通用】，可以看到【任何来源】已经选定。
+    - 单击选择菜单：接着打开【系统偏好设置】，选择【安全性与隐私】，选择【通用】，可以看到【任何来源】已经选定。
     
     <p align="center">
-      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_01.png" width="60%" height="60%" />
+      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_01.png" width="50%" height="50%" />
     </p>
     
     - 窗口底部允许从以下位置下载的App会看到：已阻止使用“BDMCC”，因为来自身份不明的开发者。点击后面的【仍要打开】按钮。
     
     <p align="center">
-      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_02.png" width="60%" height="60%" />
+      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_02.png" width="50%" height="50%" />
     </p>
     <p align="center">
-      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_03.png" width="60%" height="60%" />
+      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_03.png" width="50%" height="50%" />
     </p>
     
     - 在弹出的确认弹窗中，点击【打开】按钮即可。
     <p align="center">
-      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_04.png" width="60%" height="60%" />
+      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_04.png" width="50%" height="50%" />
+    </p>
+
+    - 如果发现还是显示“已损坏，无法打开。您应该将它移到废纸篓”。请单击【取消】。接下来在终端粘贴复制输入命令（注意最后有一个空格）：
+    ```bash
+    sudo xattr -r -d com.apple.quarantine /Applications/BDMCC.app
+    ```
+    <p align="center">
+      <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_06.png" width="50%" height="50%" />
     </p>
     
 - macOS Intel系列芯片请下载安装`BDMCC_1.0.1_x64.dmg`。理论上支持Big Sur以后的版本，目前仅在10代Intel芯片的Big Sur 11.6.1版本上进行了测试。
