@@ -13,7 +13,7 @@
 ## 2 PostgreSQl是否正确安装、配置
 - 使用本软件前请确保PostgreSQl已经正确安装并配置相应的环境变量。
 ### 2.1 PostgreSQl环境变量的查询
-- Windows系统下查询：按"Windows徽标键键"+"R"，并在“打开”框中键入“cmd”，然后输入"where psql"。如果cmd终端中出现`C:\Program Files\PostgreSQL\16\bin\psql.exe`等类似结果即表明该PostgreSQl已经安装配置完毕。
+- Windows系统下查询：按【Windows徽标键键】+【R】，并在【打开】框中键入“cmd”，然后输入"where psql"。如果cmd终端中出现`C:\Program Files\PostgreSQL\16\bin\psql.exe`等类似结果即表明该PostgreSQl已经安装配置完毕。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_01.png" width="60%" height="60%" />
 </p>
