@@ -4,7 +4,7 @@
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_logo.png" width="10%" height="10%" />
 </p>
 
-- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的公开重症数据库（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC）、麻醉数据库（INSPIRE）等等关系型医学数据集的一键安装。部分数据库将含有独家的增强型BDMCC系列表单（类似于MIMIC数据库的Concepts功能），上述增强型表单已经移除官方Concepts存在的部分Bug并进行优化，配合R包`strong`包可极大提高数据处理效率。
+- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的公开重症数据库（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC）等关系型医学数据集的一键安装。部分数据库将含有独家的增强型BDMCC系列表单（类似于MIMIC数据库的Concepts功能），上述增强型表单已经移除官方Concepts存在的部分Bug并进行优化，配合R包`strong`包可极大提高数据处理效率。
 - 软件覆盖支持Windows、macOS、Linux三种操作系统，实现在任何平台下，均可以最快、最方便的方式完成对目标数据库的一键安装及后续的一键升级管理。
 - 本软件仅提供一键安装功能，不提供任何数据集的下载！安装所需的数据集请自行前往官网进行申请，请遵守数据使用协议，维护良好学术道德风尚。
 - 本软件由重症医学、小明学习室、实战医学统计、R语言统计与绘图、重症超声教学资源(以上排名不分先后)联合发布。
@@ -37,7 +37,7 @@
     ```bash
     sudo spctl  --master-disable
     ```
-		
+	
     - 单击选择菜单：接着打开【系统偏好设置】，选择【安全性与隐私】，选择【通用】，可以看到【任何来源】已经选定。
     
     <p align="center">
@@ -58,7 +58,7 @@
       <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_04.png" width="50%" height="50%" />
     </p>
 
-    - 如果发现还是显示“已损坏，无法打开。您应该将它移到废纸篓”。请单击【取消】。接下来在终端粘贴复制输入命令（注意最后有一个空格）：
+    - 如果发现还是显示“已损坏，无法打开。您应该将它移到废纸篓”。请单击【取消】。接下来在终端粘贴复制输入命令：
     ```bash
     sudo xattr -r -d com.apple.quarantine /Applications/BDMCC.app
     ```
