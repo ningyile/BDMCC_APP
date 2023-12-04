@@ -1,18 +1,23 @@
 # 重症大数据行者（Big Data Master of Critical Care，BDMCC）
-## 1 关于BDMCC
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_logo.png" width="20%" height="20%" />
 </p>
 
-- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的公开重症数据库（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据库将含有独家的增强型BDMCC系列表单（类似于MIMIC数据库的Concepts功能），上述增强型表单已经移除官方Concepts存在的部分Bug并进行优化，配合R包`strong`包可极大提高数据处理效率。
-- 软件覆盖支持Windows、macOS、Linux三种操作系统，实现在任何平台下，均可以最快、最方便的方式完成对目标数据库的一键安装及后续的一键升级管理。
-- 本软件仅提供一键安装功能，不提供任何数据集的下载！安装所需的数据集请自行前往官网进行申请，请遵守数据使用协议，维护良好学术道德风尚。
-- 本软件由重症医学、小明学习室、实战医学统计、R语言统计与绘图、重症超声教学资源(以上排名不分先后)联合发布。
+## 1 为什么选择BDMCC
+
+- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的开源重症数据集（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据集含有独家BDMCC系列增强表单（类似于MIMIC数据集的Concepts功能），上述表单已经移除官方Concepts存在的部分Bug并进行优化，配合[**strong包**](https://github.com/ningyile/strongInstall_pkg)可极大提高数据处理效率。
+- BDMCC开发者为ICU医生，具有ICU医疗背景，同时具有ICU数据库软件的前后端开发经验。发布运营团队（重症行者翻译组、easyDSM团队）多名成员具有重症医学、R语言编程、统计学专业相关背景。熟悉重症数据集研究中的数据提取、数据清洗、数据建模等流程。
+
+## 2 关于BDMCC
+
+- 软件覆盖支持Windows、macOS、Linux三种操作系统，实现在任何平台下，以最快、最方便的方式完成对目标数据集的一键安装及后续的一键升级管理。
+- **本软件仅提供一键安装功能，不提供任何数据集的下载！安装所需的数据集请自行前往官网进行申请，请遵守数据使用协议，维护良好学术道德风尚。**
+- 本软件由**重症医学**、**小明学习室**、**实战医学统计**、**R语言统计与绘图**、**重症超声教学资源**(以上排名不分先后)联合发布。
 - 所有软件均无病毒无后门！请于[本软件唯一官网](https://github.com/ningyile/BDMCC_APP)放心下载安装使用。
 
-## 2 PostgreSQl是否正确安装、配置
+## 3 PostgreSQl是否正确安装、配置
 - 使用本软件前请确保PostgreSQl已经正确安装并配置相应的环境变量。
-### 2.1 PostgreSQl环境变量的查询
+### 3.1 PostgreSQl环境变量的查询
 - Windows系统下查询：按【Windows徽标键键】+【R】，并在【打开】框中键入“cmd”，然后输入"where psql"。如果cmd终端中出现`C:\Program Files\PostgreSQL\16\bin\psql.exe`等类似结果即表明该PostgreSQl已经安装配置完毕。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_01.png" width="80%" height="80%" />
@@ -23,14 +28,14 @@
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_02.png" width="80%" height="80%" />
 </p>
 
-### 2.2 PostgreSQl在三大系统下的安装及配置。
-- 若在上述查询中未能返回有效的结果，则证明PostgreSQl未安装或未正确配置。具体解决方案请单击此处观看相应系统下的安装及配置视频教程。
+### 3.2 PostgreSQl在三大系统下的安装及配置。
+- 若在上述查询中未能返回有效的结果，则证明PostgreSQl未安装或未正确配置。具体解决方案请看第一部分的视频教程。
   
-## 3 BDMCC下载安装说明
+## 4 BDMCC下载安装说明
 - 请根据操作系统及芯片选择下载安装相应的程序文件。
-### 3.1 Windows系统下载安装说明
+### 4.1 Windows系统下载安装说明
 - Windows系统仅支持Win10 2004及其后续版本（包括Win11）的X64架构，目前仅在Win10 22H2版本进行了测试。Windows系统查看版本的方法：按"Windows徽标键键"+"R"，并在“打开”框中键入“winver”，然后选择"确定"。如符合上述条件请下载安装`BDMCC_1.0.1_x64-setup.exe`。**请注意安装路径使用英文字母**。
-### 3.2 macOS系统下载安装说明
+### 4.2 macOS系统下载安装说明
 - macOS Intel与M1/M2系列芯片的设备在安装后首次启动BDMCC软件时均会提示:`无法打开BDMCC.app，因为无法验证开发者`。请单击【取消】并使用如下方法解决：
 
     - 打开【终端】，在终端中输入下列代码，以开启“任何来源”。
@@ -69,12 +74,67 @@
 - macOS Intel系列芯片请下载安装`BDMCC_1.0.1_x64.dmg`。理论上支持Big Sur以后的版本，目前仅在10代Intel芯片的Big Sur 11.6.1版本上进行了测试。
 
 - macOS M1/M2系列芯片请下载安装`BDMCC_1.0.1_aarch64.dmg`。理论上支持Big Sur以后的版本，目前仅在M2 Max的Sonoma 14.1.1版本上进行了测试，建议将系统更新至最新版使用。
-### 3.3 Linux系统下载安装说明
-- Linux系统理论上支持所有Debian系列系统，目前仅在Ubuntu LTS 22.04版本进行了测试，如果在Linux上使用，强烈建议使用Ubuntu系统，其他发行版Linux不保证可正常运行。Linux系统请下载`BDMCC_1.0.1_amd64.deb`后，于所在路径开启终端，然后在终端下键入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
+### 4.3 Linux系统下载安装说明
+- Linux系统理论上支持所有Debian系发行版系统，目前仅在Ubuntu LTS 22.04版本进行了测试，如果在Linux上使用，强烈建议使用Ubuntu系统，其他发行版Linux不保证可正常运行。Linux系统请下载`BDMCC_1.0.1_amd64.deb`后，于所在路径开启终端，然后在终端下键入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
 ```bash
 sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 ```
-## 4 各系统运行截图
+## 5 BDMCC使用说明
+
+### 5.1 配置软件账户密码
+
+- 打开软件后填写 PostgreSQL的账户和密码，如填写正确会有相应的提示。
+
+### 5.2 选择数据集文件路径
+- 选择数据集文件所在的路径（注意是**上一级路径**，本例中数据集文件路径为桌面的database文件夹，使用上一级目录在安装不同数据集时可以避免频繁切换数据文件夹）。数据集安装文件对应的文件夹对应关系如下表：
+
+  | 数据集            | 版本号 | 对应的子一级（相对于上一级路径database）文件夹 |
+  | ----------------- | ------ | ---------------------------------------------- |
+  | MIMIC-III-Demo    | V1.4   | mimic-iii-clinical-database-demo-1.4           |
+  | MIMIC-III         | V1.4   | mimic-iii-clinical-database-1.4                |
+  | MIMIC-III-CareVue | V1.4   | mimic-iii-clinical-database-carevue-subset-1.4 |
+  | MIMIC-IV          | V2.0   | mimic-iv-2.0                                   |
+  | eICU              | V2.0   | eicu-collaborative-research-database-2.0       |
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_01.png" width="80%" height="80%" />
+</p>
+
+### 5.3 数据文件的目录结构
+- 各个文件夹的目录树结构严格按照Physionet官网中原始数据文件的目录结构。如下图，以**MIMIC-IV V2.0为例 **，[官网](https://www.physionet.org/content/mimiciv/2.0/#files-panel)和下载的本地数据文件树目录结构需要完全保持一致。此外，在安装前BDMCC软件还会对原始的数据文件进行校验，以确定数据的准确性和唯一性。如文件校验未通过，则安装无法继续进行。
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_02.png" width="80%" height="80%" />
+</p>
+### 5.4 数据集安装的模块选择
+
+- 各个文上述数据集大多包含三个模块：Base、Concepts和BDMCC（本软件构建的系列增强型表单）模块。其中Base是将数据文件拷贝至相应的数据集；Concepts模块则是官方在Base模块基础上进行进一步计算获取的表单如SOFA、APS评分等表单；BDMCC系列增强型表单则包含文章数据分析时的研究队列人群所需的常用数据，优化了官方Concepts中的部分bug，配合使用可大大减少代码量同时提高数据提取的效率。故上述模块安装顺序依次是Base、Concepts和BDMCC。当所依赖的模块不存在时，后续的模块无法进行安装，故选择模块时应根据设备上数据集模块的安装情况进行选择。
+
+### 5.5 数据集占用磁盘空间情况
+- 重症数据集会占用大量的磁盘空间。BDMCC软件在安装对应的数据集之前会校验PostgreSQL的数据路径的剩余空间，当磁盘剩余空间小于目标数据集所需的空间时，安装则难以为继。在不同系统中所占空间大小不一（相差不会很大），故BDMCC软件中设定的空间大小在原来基础上留3GB左右作为冗余空间。BDMCC软件中各数据集以及各模块设定的磁盘空间情况如下表：
+
+  | 数据集            | 版本号 | Base模块 | Concepts模块 |
+  | ----------------- | ------ | -------- | ------------ |
+  | MIMIC-III-Demo    | V1.4   |          |              |
+  | MIMIC-III         | V1.4   | 75 GB    | 4 GB         |
+  | MIMIC-III-CareVue | V1.4   | 38 GB    | 3 GB         |
+  | MIMIC-IV          | V2.0   | 98 GB    | 9 GB         |
+  | eICU              | V2.0   | 55 GB    | 6 GB         |
+
+
+### 5.6 数据集安装时间
+- BDMCC软件具有极高的执行效率和性能。以10代intel CPU 10850K、内存64G的macOS为例，各数据集和模块的安装时间如下表：
+
+	| 数据集            | 版本号 | Base模块 | Concepts模块 |
+  | ----------------- | ------ | -------- | ------------ |
+  | MIMIC-III-Demo    | V1.4   |          |              |
+  | MIMIC-III         | V1.4   | 53 min   | 20 min       |
+  | MIMIC-III-CareVue | V1.4   | 22 min   | 7 min        |
+  | MIMIC-IV          | V2.0   | 54 min   | 55 min       |
+  | eICU              | V2.0   | 15 min   | 21 min       |
+  
+## 6 各系统运行截图
+
 - Windows下默认主题、中文语言
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/win_run_01.png" width="80%" height="80%" />
@@ -90,5 +150,5 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/linux_run_01.png" width="80%" height="80%" />
 </p>
 
-## 5 更新日志
-- **V1.0.1** 支持MIMIC-III-Demo V1.4、MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0、eICU V2.0数据库安装。其中MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0含增强型系列表单BDMCC，可有效减少后期R语言代码。
+## 7 更新日志
+- **V1.0.1** 支持MIMIC-III-Demo V1.4、MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0、eICU V2.0数据集安装。其中MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0含增强型系列表单BDMCC（目前只包含bdmcc_population，后续会陆续更新），可有效减少后期R语言代码。
