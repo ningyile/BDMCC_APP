@@ -6,7 +6,7 @@
 ## 1 为什么选择BDMCC
 
 - 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的开源重症数据集（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据集含有独家BDMCC系列增强表单（类似于MIMIC数据集的Concepts功能），上述表单已经移除官方Concepts存在的部分Bug并进行优化，配合[**strong包**](https://github.com/ningyile/strongInstall_pkg)可极大提高数据处理效率。
-- BDMCC开发者为ICU医生，具有ICU医疗背景，同时具有ICU数据库软件的前后端开发经验。发布运营团队（重症行者翻译组、easyDSM团队）多名成员具有重症医学、R语言编程、统计学专业相关背景。熟悉重症数据集研究中的数据提取、数据清洗、数据建模等流程。
+- BDMCC开发者为ICU医生，同时具有ICU医疗背景以及ICU数据库的开发经验。发布运营团队（重症行者翻译组、easyDSM团队）多名成员具有重症医学、R语言编程、统计学专业相关背景。熟悉重症数据集研究中的数据提取、数据清洗、数据建模等流程。
 
 ## 2 关于BDMCC
 
@@ -20,12 +20,12 @@
 ### 3.1 PostgreSQl环境变量的查询
 - Windows系统下查询：按【Windows徽标键键】+【R】，并在【打开】框中键入“cmd”，然后输入"where psql"。如果cmd终端中出现`C:\Program Files\PostgreSQL\16\bin\psql.exe`等类似结果即表明该PostgreSQl已经安装配置完毕。
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_01.png" width="80%" height="80%" />
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_01.png" width="60%" height="60%" />
 </p>
 
 - macOS与Linux系统下查询：打开终端，然后输入"which psql"。如果终端中出现`/usr/local/bin/psql`等类似结果即表明该PostgreSQl已经安装配置完毕。
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_02.png" width="80%" height="80%" />
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_02.png" width="60%" height="60%" />
 </p>
 
 ### 3.2 PostgreSQl在三大系统下的安装及配置。
@@ -96,10 +96,10 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-IV          | V2.0   | mimic-iv-2.0                                   |
   | eICU              | V2.0   | eicu-collaborative-research-database-2.0       |
 
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_01.png" width="80%" height="80%" />
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_01.png" width="100%" height="100%" />
 </p>
+
 
 ### 5.3 数据文件的目录结构
 - 各个文件夹的目录树结构严格按照Physionet官网中原始数据文件的目录结构。如下图，以**MIMIC-IV V2.0为例 **，[官网](https://www.physionet.org/content/mimiciv/2.0/#files-panel)和下载的本地数据文件树目录结构需要完全保持一致。此外，在安装前BDMCC软件还会对原始的数据文件进行校验，以确定数据的准确性和唯一性。如文件校验未通过，则安装无法继续进行。
