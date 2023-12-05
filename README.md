@@ -5,8 +5,8 @@
 
 ## 1 为什么选择BDMCC
 
-- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的开源重症数据集（MIMIC-III、MIMIC-III-Carevue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据集含有独家BDMCC系列增强表单（类似于MIMIC数据集的Concepts功能），上述表单已经移除官方Concepts存在的部分Bug并进行优化，配合[**strong包**](https://github.com/ningyile/strongInstall_pkg)可极大提高数据处理效率。
-- BDMCC开发者为ICU医生，同时具有ICU医疗背景以及ICU数据库的开发经验。发布运营团队（重症行者翻译组、easyDSM团队）多名成员具有重症医学、R语言编程、统计学专业相关背景。熟悉重症数据集研究中的数据提取、数据清洗、数据建模等流程。
+- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的开源重症数据集（MIMIC-III、MIMIC-III-CareVue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据集含有独家BDMCC系列增强表单（类似于MIMIC数据集的Concepts功能），上述表单已经移除官方Concepts存在的部分Bug并进行优化，配合[**strong包**](https://github.com/ningyile/strongInstall_pkg)可极大提高数据处理效率。
+- BDMCC开发者为ICU医生，同时具有ICU医疗背景以及ICU数据库的开发经验。发布运营团队（**重症行者翻译组、easyDSM团队**）多名成员具有重症医学、R语言编程、统计学专业相关背景。熟悉重症数据集研究中的数据提取、数据清洗、数据建模等流程。
 
 ## 2 关于BDMCC
 
@@ -140,7 +140,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/win_run_01.png" width="80%" height="80%" />
 </p>
 
-- macOS下默认主题、英文语言
+- macOS下默认主题、中文语言
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_run_01.png" width="80%" height="80%" />
 </p>
