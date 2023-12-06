@@ -106,8 +106,8 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_02.png" width="80%" height="80%" />
 </p>
-### 5.4 数据集安装的模块选择
 
+### 5.4 数据集安装的模块选择
 - 各个文上述数据集大多包含三个模块：Base、Concepts和BDMCC（本软件构建的系列增强型表单）模块。其中Base是将数据文件拷贝至相应的数据集；Concepts模块则是官方在Base模块基础上进行进一步计算获取的表单如SOFA、APS评分等表单；BDMCC系列增强型表单则包含文章数据分析时的研究队列人群所需的常用数据，优化了官方Concepts中的部分bug，配合使用可大大减少代码量同时提高数据提取的效率。故上述模块安装顺序依次是Base、Concepts和BDMCC。当所依赖的模块不存在时，后续的模块无法进行安装，故选择模块时应根据设备上数据集模块的安装情况进行选择。
 
 ### 5.5 数据集占用磁盘空间情况
