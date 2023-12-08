@@ -85,6 +85,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/bdmcc_dep_02.png" width="60%" height="60%" />
 </p>
+
 - 完成依赖库校验后，请下载`BDMCC_1.0.1_amd64.deb`安装包，于所在路径开启终端，然后在终端下键入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
 ```bash
 sudo dpkg -i BDMCC_xxxxxx_amd64.deb
