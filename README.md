@@ -85,7 +85,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/bdmcc_dep_02.png" width="60%" height="60%" />
 </p>
-- Linux系统请下载`BDMCC_1.0.1_amd64.deb`后，于所在路径开启终端，然后在终端下输入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
+- 完成依赖库校验后，请下载`BDMCC_1.0.1_amd64.deb`安装包，于所在路径开启终端，然后在终端下键入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
 ```bash
 sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 ```
@@ -135,13 +135,14 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 ### 5.6 数据集安装时间
 - BDMCC软件具有极高的执行效率和性能。以10代intel CPU 10850K、内存64G的macOS为例，各数据集和模块的安装时间如下表：
 
-	| 数据集            | 版本号 | Base模块 | Concepts模块 |
-  | ----------------- | ------ | -------- | ------------ |
-  | MIMIC-III-Demo    | V1.4   |          |              |
-  | MIMIC-III         | V1.4   | 53 min   | 20 min       |
-  | MIMIC-III-CareVue | V1.4   | 22 min   | 7 min        |
-  | MIMIC-IV          | V2.0   | 54 min   | 55 min       |
-  | eICU              | V2.0   | 15 min   | 21 min       |
+	| DBeaver中对应数据集名称 | 数据集            | 版本号 | Base模块 | Concepts模块 |
+  | ----------------------- | ----------------- | ------ | -------- | ------------ |
+  | mimic3_demo             | MIMIC-III-Demo    | V1.4   |          |              |
+  | mimic3                  | MIMIC-III         | V1.4   | 53 min   | 20 min       |
+  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min   | 7 min        |
+  | mimic4                  | MIMIC-IV          | V2.0   | 54 min   | 55 min       |
+  | eicu                    | eICU              | V2.0   | 15 min   | 21 min       |
+  
   
 ## 6 各系统运行截图
 
