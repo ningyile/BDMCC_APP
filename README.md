@@ -79,6 +79,12 @@
 ```bash
 ./bdmcc_dep
 ```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/bdmcc_dep_01.png" width="60%" height="60%" />
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/bdmcc_dep_02.png" width="60%" height="60%" />
+</p>
 - Linux系统请下载`BDMCC_1.0.1_amd64.deb`后，于所在路径开启终端，然后在终端下输入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
 ```bash
 sudo dpkg -i BDMCC_xxxxxx_amd64.deb
