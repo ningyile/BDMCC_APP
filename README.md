@@ -89,6 +89,7 @@
 ```bash
 sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 ```
+
 ## 5 BDMCC使用说明
 
 ### 5.1 配置软件账户密码
