@@ -75,7 +75,11 @@
 
 - macOS M1/M2系列芯片请下载安装`BDMCC_1.0.1_aarch64.dmg`。理论上支持Big Sur以后的版本，目前仅在M2 Max的Sonoma 14.1.1版本上进行了测试，建议将系统更新至最新版使用。
 ### 4.3 Linux系统下载安装说明
-- Linux系统理论上支持所有Debian系发行版系统，目前仅在Ubuntu LTS 22.04版本进行了测试，如果在Linux上使用，强烈建议使用Ubuntu系统，其他发行版Linux不保证可正常运行。Linux系统请下载`BDMCC_1.0.1_amd64.deb`后，于所在路径开启终端，然后在终端下键入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
+- Linux系统理论上支持所有Debian系发行版系统，目前仅在Ubuntu LTS 22.04版本进行了测试，如果在Linux上使用，强烈建议使用Ubuntu系统，其他发行版Linux不保证可正常运行。由于各发行版的Debian安装后可能缺失必要的依赖库。故需要下载本项目中的二进制程序**`bdmcc_dep`**，以完成依赖库的自动化校验，如检查到缺失依赖库，则该程序会进行自动化安装。假如你将二进制程序**`bdmcc_dep`**下载至桌面，则需在桌面打开终端，并输入以下命令即可完成依赖库的自动化校验及安装：
+```bash
+./bdmcc_dep
+```
+- Linux系统请下载`BDMCC_1.0.1_amd64.deb`后，于所在路径开启终端，然后在终端下输入以下命令(xxxxxx修改为相应的BDMCC的版本号)即可完成安装：
 ```bash
 sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 ```
