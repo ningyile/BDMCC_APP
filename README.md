@@ -15,21 +15,21 @@
 - 本软件在**重症医学**、**小明学习室**、**实战医学统计**、**R语言统计与绘图**、**重症超声教学资源**(以上排名不分先后)公众号同步发布。
 - 所有软件均无病毒无后门！请于[本软件唯一官网](https://github.com/ningyile/BDMCC_APP/releases)放心下载安装使用。
 
-## 3 PostgreSQl是否正确安装、配置
-- 使用本软件前请确保PostgreSQl已经正确安装并配置相应的环境变量。
-### 3.1 PostgreSQl环境变量的查询
-- Windows系统下查询：按【Windows徽标键键】+【R】，并在【打开】框中键入“cmd”，然后输入"where psql"。如果cmd终端中出现`C:\Program Files\PostgreSQL\16\bin\psql.exe`等类似结果即表明该PostgreSQl已经安装配置完毕。
+## 3 PostgreSQL是否正确安装、配置
+- 使用本软件前请确保PostgreSQL已经正确安装并配置相应的环境变量。
+### 3.1 PostgreSQL环境变量的查询
+- Windows系统下查询：按【Windows徽标键】+【R】，并在【打开】框中键入“cmd”，然后输入"where psql"。如果cmd终端中出现`C:\Program Files\PostgreSQL\16\bin\psql.exe`等类似结果即表明该PostgreSQL已经安装配置完毕。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_01.png" width="60%" height="60%" />
 </p>
 
-- macOS与Linux系统下查询：打开终端，然后输入"which psql"。如果终端中出现`/usr/local/bin/psql`等类似结果即表明该PostgreSQl已经安装配置完毕。
+- macOS与Linux系统下查询：打开终端，然后输入"which psql"。如果终端中出现`/usr/local/bin/psql`等类似结果即表明该PostgreSQL已经安装配置完毕。
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/env_02.png" width="60%" height="60%" />
 </p>
 
-### 3.2 PostgreSQl在三大系统下的安装及配置。
-- 若在上述查询中未能返回有效的结果，则证明PostgreSQl未安装或未正确配置。具体解决方案请看第一部分的视频教程。
+### 3.2 PostgreSQL在三大系统下的安装及配置。
+- 若在上述查询中未能返回有效的结果，则证明PostgreSQL未安装或未正确配置。具体解决方案请看第一部分的视频教程。
   
 ## 4 BDMCC下载安装说明
 - 请根据操作系统及芯片选择下载安装相应的程序文件。
