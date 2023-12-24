@@ -164,4 +164,5 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 </p>
 
 ## 7 更新日志
+- **V1.0.2** 修复MIMIC-IV V2.0数据集下的BDMCC模块的bdmcc_population表单安装至Concepts模块下（mimic_derived模式下）的bug。
 - **V1.0.1** 支持MIMIC-III-Demo V1.4、MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0、eICU V2.0数据集安装。其中MIMIC-IV V2.0含增强型系列表单BDMCC（目前MIMIC-IV V2.0只包含bdmcc_population。MIMIC-III V1.4、MIMIC-III-CareVue V1.4暂无BDMCC系列表单，后续会陆续更新），可有效减少后期R语言代码。
