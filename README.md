@@ -164,6 +164,6 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 </p>
 
 ## 7 更新日志
-- **V1.0.3** 增加网络故障时相关信息的提示；优化云连接获取逻辑（云链接timeout阈值为30s，增加全国/全球动态IP加速）；优化Windows、macOS、Linux序列号获取逻辑。
+- **V1.0.3** 增加MIMIC-III V1.4、MIMIC-III-CareVue V1.4的BDMCC增强表单；增加网络故障时相关信息的提示；优化云连接获取逻辑（云链接timeout阈值为30s，增加全国/全球动态IP加速）；优化Windows、macOS、Linux序列号获取逻辑。
 - **V1.0.2** 修复MIMIC-IV V2.0数据集下的BDMCC模块的bdmcc_population表单安装至Concepts模块下（mimic_derived模式下）的bug；优化首次启动时PG用户设置显示标签。
 - **V1.0.1** 支持MIMIC-III-Demo V1.4、MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0、eICU V2.0数据集安装。其中MIMIC-IV V2.0含增强型系列表单BDMCC（目前MIMIC-IV V2.0只包含bdmcc_population。MIMIC-III V1.4、MIMIC-III-CareVue V1.4暂无BDMCC系列表单，后续会陆续更新），可有效减少后期R语言代码。
