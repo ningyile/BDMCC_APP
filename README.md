@@ -128,7 +128,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 
   | 数据集             | 版本号  | Base模块 | Concepts模块 | BDMCC模块 |
   | ----------------- | ------ | -------- | ------------ | ------------ |
-  | MIMIC-III-Demo    | V1.4   |          |              |              |
+  | MIMIC-III-Demo    | V1.4   | 200 MB   | 25 MB        |              |
   | MIMIC-III         | V1.4   | 75 GB    | 8 GB         | 5 GB         |
   | MIMIC-III-CareVue | V1.4   | 38 GB    | 3 GB         | 5 GB         |
   | MIMIC-IV          | V2.0   | 99 GB    | 9 GB         | 5 GB         |
@@ -141,7 +141,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 
   | DBeaver中对应数据集名称 | 数据集            | 版本号 | Base模块 | Concepts模块 | BDMCC模块 |
   | ----------------------- | ----------------- | ------ | -------- | ------------ | ------------ |
-  | mimic3_demo             | MIMIC-III-Demo    | V1.4   |          |              |              |
+  | mimic3_demo             | MIMIC-III-Demo    | V1.4   | 10 s     | 19 s         |              |
   | mimic3                  | MIMIC-III         | V1.4   | 53 min   | 40 min       | 10 min       |
   | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min   | 22 min       | 10 min       |
   | mimic4                  | MIMIC-IV          | V2.0   | 54 min   | 55 min       | 18 min       |
