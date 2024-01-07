@@ -143,7 +143,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | ----------------------- | ----------------- | ------ | -------- | ------------ | ------------ |
   | mimic3_demo             | MIMIC-III-Demo    | V1.4   | 10 s     | 19 s         |              |
   | mimic3                  | MIMIC-III         | V1.4   | 53 min   | 40 min       | 10 min       |
-  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min   | 22 min       | 10 min       |
+  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min   | 24 min       | 10 min       |
   | mimic4                  | MIMIC-IV          | V2.0   | 54 min   | 55 min       | 18 min       |
   | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min   | 54 min       | 18 min       |
   | eicu                    | eICU              | V2.0   | 15 min   | 21 min       |              |
