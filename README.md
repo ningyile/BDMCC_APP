@@ -128,7 +128,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 
   | 数据集             | 版本号  | Base模块 | Concepts模块 | BDMCC模块 |
   | ----------------- | ------ | -------- | ------------ | ------------ |
-  | MIMIC-III-Demo    | V1.4   | 200 MB   | 25 MB        |              |
+  | MIMIC-III-Demo    | V1.4   | 200 MB   | 30 MB        |              |
   | MIMIC-III         | V1.4   | 75 GB    | 8 GB         | 5 GB         |
   | MIMIC-III-CareVue | V1.4   | 38 GB    | 3 GB         | 5 GB         |
   | MIMIC-IV          | V2.0   | 99 GB    | 9 GB         | 5 GB         |
