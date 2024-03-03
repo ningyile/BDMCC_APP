@@ -108,6 +108,9 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-IV          | V2.0   | mimic-iv-2.0                                   |
   | MIMIC-IV          | V2.2   | mimic-iv-2.2                                   |
   | eICU              | V2.0   | eicu-collaborative-research-database-2.0       |
+  | AmsterdamUMCdb    | V1.0.2 | AmsterdamUMCdb-v1.0.2                          |
+  | PIC               | V1.1.0 | paediatric-intensive-care-database-1.1.0       |
+  | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.5|
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_01.png" width="100%" height="100%" />
@@ -134,19 +137,25 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-IV          | V2.0   | 99 GB    | 9 GB         | 5 GB         |
   | MIMIC-IV          | V2.2   | 100 GB   | 9 GB         | 5 GB         |
   | eICU              | V2.0   | 55 GB    | 6 GB         |              |
+  | AmsterdamUMCdb    | V1.0.2 | 228 GB   |              |              |
+  | PIC               | V1.1.0 | 5 GB     |              |              |
+  | SICdb             | V1.0.5 | 20 GB    |              |              |
 
 
 ### 5.6 数据集安装时间
 - BDMCC软件具有极高的执行效率和性能。以10代intel CPU 10850K、内存64G的macOS为例，各数据集和模块的安装时间如下表：
 
-  | DBeaver中对应数据集名称 | 数据集            | 版本号 | Base模块 | Concepts模块 | BDMCC模块 |
-  | ----------------------- | ----------------- | ------ | -------- | ------------ | ------------ |
-  | mimic3_demo             | MIMIC-III-Demo    | V1.4   | 10 s     | 19 s         |              |
-  | mimic3                  | MIMIC-III         | V1.4   | 53 min   | 47 min       | 5 min       |
-  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min   | 24 min       | 5 min       |
-  | mimic4                  | MIMIC-IV          | V2.0   | 54 min   | 55 min       | 12 min       |
-  | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min   | 54 min       | 12 min       |
-  | eicu                    | eICU              | V2.0   | 15 min   | 21 min       |              |
+  | DBeaver中对应数据集名称    | 数据集             | 版本号  | Base模块  | Concepts模块  | BDMCC模块     |
+  | ----------------------- | ----------------- | ------ | --------  | ------------ | ------------ |
+  | mimic3_demo             | MIMIC-III-Demo    | V1.4   | 10 s      | 19 s         |              |
+  | mimic3                  | MIMIC-III         | V1.4   | 53 min    | 47 min       | 5 min        |
+  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min    | 24 min       | 5 min        |
+  | mimic4                  | MIMIC-IV          | V2.0   | 54 min    | 55 min       | 12 min       |
+  | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min    | 54 min       | 12 min       |
+  | eicu                    | eICU              | V2.0   | 15 min    | 21 min       |              |
+  | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 35 min|              |              |
+  | pic                     | PIC               | V1.1.0 | 3 min     |              |              |
+  | sicdb                   | SICdb             | V1.0.5 | 35 min    |              |              |
   
   
 ## 6 各系统运行截图
@@ -167,6 +176,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 </p>
 
 ## 7 更新日志
+- **V1.0.4** 增加AmsterdamUMCdb V1.0.2、PIC V1.1.0、SiCdb V1.0.5三个数据库的支持，此版本客户端中三个数据库的安装支持仅有Base模块（官方仅只有Base或干脆未提供PG安装方法），对应的BDMCC模块后续版本客户端完善；新增MIMIC-III V1.4、MIMIV-III CareVue V1.4、MIMIC-IV V2.0、MIMIC-IV V2.2数据集中BDMCC模块的一些干预措施字段（例如是否使用白蛋白、RRT等），使用时仅需单独升级BDMCC模块即可，无需重复安装对应的Base和Concepts模块。
 - **V1.0.3** 更新MIMIC系列数据集安装代码（主要是Concepts相关代码），与MIT官方保持同步（更新至2024-1-1）；增加对MIMIC-IV V2.2数据集的支持；增加MIMIC-III V1.4、MIMIC-III-CareVue V1.4的BDMCC增强表单；增加网络故障时相关信息的提示；优化云连接获取逻辑（云链接timeout阈值为30s，增加全国/全球动态IP加速）；增加数据集文件校验，以及Base、Concepts、BDMCC模块单独校验功能。
 - **V1.0.2** 修复MIMIC-IV V2.0数据集下的BDMCC模块的bdmcc_population表单安装至Concepts模块下（mimic_derived模式下）的bug；优化首次启动时PG用户设置显示标签。
 - **V1.0.1** 支持MIMIC-III-Demo V1.4、MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0、eICU V2.0数据集安装。其中MIMIC-IV V2.0含增强型系列表单BDMCC（目前MIMIC-IV V2.0只包含bdmcc_population。MIMIC-III V1.4、MIMIC-III-CareVue V1.4暂无BDMCC系列表单，后续会陆续更新），可有效减少后期R语言代码。
