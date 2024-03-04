@@ -153,9 +153,9 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | mimic4                  | MIMIC-IV          | V2.0   | 54 min    | 55 min       | 12 min       |
   | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min    | 54 min       | 12 min       |
   | eicu                    | eICU              | V2.0   | 15 min    | 21 min       |              |
-  | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 35 min|              |              |
+  | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 26 min |              |              |
   | pic                     | PIC               | V1.1.0 | 3 min     |              |              |
-  | sicdb                   | SICdb             | V1.0.5 | 35 min    |              |              |
+  | sicdb                   | SICdb             | V1.0.5 | 4 min    |              |              |
   
   
 ## 6 各系统运行截图
