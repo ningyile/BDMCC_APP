@@ -113,6 +113,8 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | AmsterdamUMCdb    | V1.0.2 | AmsterdamUMCdb-v1.0.2                                        |
   | PIC               | V1.1.0 | paediatric-intensive-care-database-1.1.0                     |
   | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.5 |
+  
+  **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/dir_tree_01.png" width="100%" height="100%" />
@@ -138,12 +140,14 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-III-CareVue | V1.4   | 38 GB    | 3 GB         | 5 GB         |
   | MIMIC-IV          | V2.0   | 99 GB    | 9 GB         | 5 GB         |
   | MIMIC-IV          | V2.2   | 100 GB   | 9 GB         | 5 GB         |
-  | MIMIC-IV-ED（安装至MIMIC-IV的ED模块） | V2.2   | 5 GB（ED模块）   |              |              |
-  | MIMIC-IV-Note（安装至MIMIC-IV的Note模块） | V2.2   | 9 GB（Note模块） |              |              |
+  | MIMIC-IV-ED | V2.2   | 5 GB（ED模块）   |              |              |
+  | MIMIC-IV-Note | V2.2   | 9 GB（Note模块） |              |              |
   | eICU              | V2.0   | 55 GB    | 6 GB         |              |
   | AmsterdamUMCdb    | V1.0.2 | 228 GB   |              |              |
   | PIC               | V1.1.0 | 5 GB     |              |              |
   | SICdb             | V1.0.5 | 20 GB    |              |              |
+  
+  **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
 
 
 ### 5.6 数据集安装时间
@@ -156,8 +160,8 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min    | 24 min       | 5 min        |
   | mimic4                  | MIMIC-IV          | V2.0   | 54 min    | 55 min       | 12 min       |
   | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min    | 54 min       | 12 min       |
-  | mimic4_v22              | MIMIC-IV-ED（安装至MIMIC-IV的ED模块） | V2.2   | 30 s（ED模块） |        |        |
-  | mimic4_v22              | MIMIC-IV-Note（安装至MIMIC-IV的Note模块） | V2.2   | 3 min（Note模块） |        |        |
+  | mimic4_v22              | MIMIC-IV-ED | V2.2   | 30 s（ED模块） |        |        |
+  | mimic4_v22              | MIMIC-IV-Note | V2.2   | 3 min（Note模块） |        |        |
   | eicu                    | eICU              | V2.0   | 15 min    |        |              |
   | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 26 min |              |              |
   | pic                     | PIC               | V1.1.0 | 3 min     |              |              |
