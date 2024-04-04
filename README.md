@@ -176,7 +176,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_run_01.png" width="80%" height="80%" />
 </p>
 
-- Linux系统暗黑主题、英文语言
+- Linux系统默认主题、英文语言
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/linux_run_01.png" width="80%" height="80%" />
 </p>
