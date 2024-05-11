@@ -113,6 +113,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | AmsterdamUMCdb    | V1.0.2 | AmsterdamUMCdb-v1.0.2                                        |
   | PIC               | V1.1.0 | paediatric-intensive-care-database-1.1.0                     |
   | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.5 |
+  | INSPIRE           | V1.2   | inspire-a-publicly-available-research-dataset-for-perioperative-medicine-1.2 |
   
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
 
@@ -133,40 +134,40 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 ### 5.5 数据集占用磁盘空间情况
 - 重症数据集会占用大量的磁盘空间。BDMCC软件在安装对应的数据集之前会校验PostgreSQL的数据路径的剩余空间，当磁盘剩余空间小于目标数据集所需的空间时，安装则难以为继。在不同系统中所占空间大小不一（相差不会很大），故BDMCC软件中设定的空间大小在原来基础上留3GB左右作为冗余空间。BDMCC软件中各数据集以及各模块设定的磁盘空间情况如下表：
 
-  | 数据集             | 版本号  | Base模块 | Concepts模块 | BDMCC模块 |
-  | ----------------- | ------ | -------- | ------------ | ------------ |
-  | MIMIC-III-Demo    | V1.4   | 200 MB   | 30 MB        |              |
-  | MIMIC-III         | V1.4   | 75 GB    | 8 GB         | 5 GB         |
-  | MIMIC-III-CareVue | V1.4   | 38 GB    | 3 GB         | 5 GB         |
-  | MIMIC-IV          | V2.0   | 99 GB    | 9 GB         | 5 GB         |
-  | MIMIC-IV          | V2.2   | 100 GB   | 9 GB         | 5 GB         |
-  | MIMIC-IV-ED | V2.2   | 5 GB（ED模块）   |              |              |
+  | 数据集             | 版本号  | Base模块     | Concepts模块 | BDMCC模块 |
+  | ----------------- | ------ | --------    | ------------ | ------------ |
+  | MIMIC-III-Demo    | V1.4   | 200 MB      | 30 MB        |              |
+  | MIMIC-III         | V1.4   | 75 GB       | 8 GB         | 5 GB         |
+  | MIMIC-III-CareVue | V1.4   | 38 GB       | 3 GB         | 5 GB         |
+  | MIMIC-IV          | V2.0   | 99 GB       | 9 GB         | 5 GB         |
+  | MIMIC-IV          | V2.2   | 100 GB      | 9 GB         | 5 GB         |
+  | MIMIC-IV-ED | V2.2   | 5 GB（ED模块）     |              |              |
   | MIMIC-IV-Note | V2.2   | 9 GB（Note模块） |              |              |
-  | eICU              | V2.0   | 55 GB    | 6 GB         |              |
-  | AmsterdamUMCdb    | V1.0.2 | 228 GB   |              |              |
-  | PIC               | V1.1.0 | 5 GB     |              |              |
-  | SICdb             | V1.0.5 | 20 GB    |              |              |
-  
+  | eICU              | V2.0   | 55 GB       | 6 GB         |              |
+  | AmsterdamUMCdb    | V1.0.2 | 228 GB      |              |              |
+  | PIC               | V1.1.0 | 5 GB        |              |              |
+  | SICdb             | V1.0.5 | 20 GB       |              |              |
+  | INSPIRE           | V1.2   | 13 GB       |              |              |
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
 
 
 ### 5.6 数据集安装时间
 - BDMCC软件具有极高的执行效率和性能。以10代intel CPU 10850K、内存64G的macOS为例，各数据集和模块的安装时间如下表：
 
-  | DBeaver中对应数据集名称    | 数据集             | 版本号  | Base模块  | Concepts模块  | BDMCC模块     |
-  | ----------------------- | ----------------- | ------ | --------  | ------------ | ------------ |
-  | mimic3_demo             | MIMIC-III-Demo    | V1.4   | 10 s      | 19 s         |              |
-  | mimic3                  | MIMIC-III         | V1.4   | 53 min    | 47 min       | 5 min        |
-  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min    | 24 min       | 5 min        |
-  | mimic4                  | MIMIC-IV          | V2.0   | 54 min    | 55 min       | 12 min       |
-  | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min    | 54 min       | 12 min       |
-  | mimic4_v22              | MIMIC-IV-ED | V2.2   | 30 s（ED模块） |        |        |
-  | mimic4_v22              | MIMIC-IV-Note | V2.2   | 3 min（Note模块） |        |        |
-  | eicu                    | eICU              | V2.0   | 15 min    |        |              |
-  | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 26 min |              |              |
-  | pic                     | PIC               | V1.1.0 | 3 min     |              |              |
-  | sicdb                   | SICdb             | V1.0.5 | 4 min    |              |              |
-  
+  | DBeaver中对应数据集名称    | 数据集             | 版本号  | Base模块         | Concepts模块  | BDMCC模块     |
+  | ----------------------- | ----------------- | ------ | --------         | ------------ | ------------ |
+  | mimic3_demo             | MIMIC-III-Demo    | V1.4   | 10 s             | 19 s         |              |
+  | mimic3                  | MIMIC-III         | V1.4   | 53 min           | 47 min       | 5 min        |
+  | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min           | 24 min       | 5 min        |
+  | mimic4                  | MIMIC-IV          | V2.0   | 54 min           | 55 min       | 12 min       |
+  | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min           | 54 min       | 12 min       |
+  | mimic4_v22              | MIMIC-IV-ED       | V2.2   | 30 s（ED模块）    |              |              |
+  | mimic4_v22              | MIMIC-IV-Note     | V2.2   | 3 min（Note模块） |              |              |
+  | eicu                    | eICU              | V2.0   | 15 min           |              |              |
+  | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 26 min       |              |              |
+  | pic                     | PIC               | V1.1.0 | 3 min            |              |              |
+  | sicdb                   | SICdb             | V1.0.5 | 4 min            |              |              |
+  | inspire                 | INSPIRE           | V1.2   | 4 min            |              |              |
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下，故在R和DBeaver中连接上述两个模块只需连接MIMIC-IV数据集即可。
 ## 6 各系统运行截图
 
@@ -186,6 +187,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 </p>
 
 ## 7 更新日志
+- **V1.0.6** 增加INSPIRE V1.2数据的一键安装。
 - **V1.0.5** 增加MIMIC-IV V2.2数据集的ED、Note模块的一键安装（需要首先至少完成MIMIC-IV数据集中Base模块的安装方可执行ED、Note的安装）；增加显示数据集官网、数据源文件子文件夹路径提示功能。
 - **V1.0.4** 增加AmsterdamUMCdb V1.0.2、PIC V1.1.0、SiCdb V1.0.5三个数据集的安装支持，此版本客户端中三个数据集的安装支持仅有Base模块（官方仅只有Base或干脆未提供PG安装方法），对应的BDMCC模块后续版本客户端完善；新增MIMIC-III V1.4、MIMIV-III CareVue V1.4、MIMIC-IV V2.0、MIMIC-IV V2.2数据集中BDMCC模块的一些干预措施字段（例如是否使用白蛋白、RRT等），使用时仅需单独升级BDMCC模块即可，无需重复安装对应的Base和Concepts模块。
 - **V1.0.3** 更新MIMIC系列数据集安装代码（主要是Concepts相关代码），与MIT官方保持同步（更新至2024-1-1）；增加对MIMIC-IV V2.2数据集的支持；增加MIMIC-III V1.4、MIMIC-III-CareVue V1.4的BDMCC增强表单；增加网络故障时相关信息的提示；优化云连接获取逻辑（云链接timeout阈值为30s，增加全国/全球动态IP加速）；增加数据集文件校验，以及Base、Concepts、BDMCC模块单独校验功能。
