@@ -148,6 +148,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | PIC               | V1.1.0 | 5 GB        |              |              |
   | SICdb             | V1.0.5 | 20 GB       |              |              |
   | INSPIRE           | V1.2   | 13 GB       |              |              |
+  
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
 
 
@@ -168,6 +169,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | pic                     | PIC               | V1.1.0 | 3 min            |              |              |
   | sicdb                   | SICdb             | V1.0.5 | 4 min            |              |              |
   | inspire                 | INSPIRE           | V1.2   | 4 min            |              |              |
+  
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下，故在R和DBeaver中连接上述两个模块只需连接MIMIC-IV数据集即可。
 ## 6 各系统运行截图
 
