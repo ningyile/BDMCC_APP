@@ -1,18 +1,18 @@
-# 重症大数据行者（Big Data Master of Critical Care，BDMCC）
+# 重症大数据大师（Big Data Master of Critical Care，BDMCC）
 <p align="center">
   <img src="https://raw.githubusercontent.com/ningyile/BDMCC_APP/main/img/mac_logo.png" width="20%" height="20%" />
 </p>
 
 ## 1 为什么选择BDMCC
 
-- 重症大数据行者（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的开源重症数据集（MIMIC-III、MIMIC-III-CareVue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据集含有独家BDMCC系列增强表单（类似于MIMIC数据集的Concepts功能），上述表单已经移除官方Concepts存在的部分Bug并进行优化，配合[**strong包**](https://github.com/ningyile/strongInstall_pkg)可极大提高数据处理效率。
+- 重症大数据大师（Big Data Master of Critical Care，BDMCC）为NYL博士开发，计划将逐步支持目前业内所有的开源重症数据集（MIMIC-III、MIMIC-III-CareVue、MIMIC-IV、eICU、HiRID、SICdb、AmsterdamUMCdb、PIC等）的一键安装。部分数据集含有独家BDMCC系列增强表单（类似于MIMIC数据集的Concepts功能），上述表单已经移除官方Concepts存在的部分Bug并进行优化，配合[**strong包**](https://github.com/ningyile/strongInstall_pkg)可极大提高数据处理效率。
 - BDMCC开发者为ICU医生，同时具有ICU医疗背景以及ICU数据库的开发经验。发布运营团队（**重症行者翻译组、easyDSM团队**）多名成员具有重症医学、R语言编程、统计学专业相关背景。熟悉重症数据集研究中的数据提取、数据清洗、数据建模等流程。
 
 ## 2 关于BDMCC
 
 - 软件覆盖支持Windows、macOS、Linux三种操作系统，实现在任何平台下，以最快、最方便的方式完成对目标数据集的一键安装及后续的一键升级管理。
 - **本软件仅提供一键安装功能，不提供任何数据集的下载！安装所需的数据集请自行前往官网进行申请，请遵守数据使用协议，维护良好学术道德风尚。**
-- 本软件在**重症医学**、**小明学习室**、**实战医学统计**、**R语言统计与绘图**、**重症超声教学资源**(以上排名不分先后)公众号同步发布。
+- 本软件在**重症医学**、**小明学习室**、**重症超声教学资源**(以上排名不分先后)公众号同步发布。
 - 所有软件均无病毒无后门！请于[本软件唯一官网](https://github.com/ningyile/BDMCC_APP/releases)放心下载安装使用。
 
 ## 3 PostgreSQL是否正确安装、配置
@@ -113,7 +113,9 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | AmsterdamUMCdb    | V1.0.2 | AmsterdamUMCdb-v1.0.2                                        |
   | PIC               | V1.1.0 | paediatric-intensive-care-database-1.1.0                     |
   | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.5 |
+  | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.6 |
   | INSPIRE           | V1.2   | inspire-a-publicly-available-research-dataset-for-perioperative-medicine-1.2 |
+  | HiRID             | V1.1.1 | hirid-a-high-time-resolution-icu-dataset-1.1.1 |
   
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
 
@@ -146,10 +148,12 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | eICU              | V2.0   | 55 GB       | 6 GB         |              |
   | AmsterdamUMCdb    | V1.0.2 | 228 GB      |              |              |
   | PIC               | V1.1.0 | 5 GB        |              |              |
-  | SICdb             | V1.0.5 | 20 GB       |              |              |
+  | SICdb             | V1.0.5 | 219 GB      |              |              |
+  | SICdb             | V1.0.6 | 247 GB      |              |              |
   | INSPIRE           | V1.2   | 13 GB       |              |              |
+  | HiRID             | V1.1.1 | 解压75 GB，安装118 GB |              |              |
   
-  **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下。
+  **注**：①MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下；②HiRID先判断解压空间是否充足（至少75 GB），充足则解压，然后再判断PG所设置的data所在磁盘空间（安装PG时设定，默认是PG所在盘）是否充足（至少118 GB）。
 
 
 ### 5.6 数据集安装时间
@@ -167,8 +171,10 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | eicu                    | eICU              | V2.0   | 15 min           |              |              |
   | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 26 min       |              |              |
   | pic                     | PIC               | V1.1.0 | 3 min            |              |              |
-  | sicdb                   | SICdb             | V1.0.5 | 4 min            |              |              |
+  | sicdb                   | SICdb             | V1.0.5 | 2 h 30 min       |              |              |
+  | sicdb_v106              | SICdb             | V1.0.6 | 2 h 35 min       |              |              |
   | inspire                 | INSPIRE           | V1.2   | 4 min            |              |              |
+  | hirid                   | HiRID             | V1.1.1 | 2 h 20 min       |              |              |
   
   **注**：MIMIC-IV-ED和MIMIC-IV-Note分别安装至MIMIC-IV的ED、Note模块，目前只支持安装至MIMIC-IV-2.2版本下，故在R和DBeaver中连接上述两个模块只需连接MIMIC-IV数据集即可。
 ## 6 各系统运行截图
@@ -189,6 +195,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 </p>
 
 ## 7 更新日志
+- **V1.0.7** 增加HiRID V1.1.1和SICdb V1.0.6数据集的一键安装;增加对今后所有版本(目前V1.0.5和V1.0.6)的SICdb数据集Deserialize Raw Data的自动提取并写入PostgreSQL (PG)功能，将SICdb中关于Offset的字段统一风格为小写(Offset为PG保留字段)，故若使用BDMCC V1.0.7之前的版本安装了SICdb数据集，请务必使用V1.0.7及其之后的新版BDMCC重新安装SICdb数据集;增加MIMIC系列数据集的BDMCC模块增强型表单的在PG中字段的注释功能，增加BDMCC客户端中字段的搜索查询模块，V1.0.7及其之后的新版BDMCC客户只需重新安装MIMIC系列数据集(MIMIC-1、MIMIC-Ill-CareVue、MIMIC-IV)的BDMCC模块即可使用新功能，无需重新安装Base和Concepts模块。
 - **V1.0.6** 增加INSPIRE V1.2数据的一键安装。
 - **V1.0.5** 增加MIMIC-IV V2.2数据集的ED、Note模块的一键安装（需要首先至少完成MIMIC-IV数据集中Base模块的安装方可执行ED、Note的安装）；增加显示数据集官网、数据源文件子文件夹路径提示功能。
 - **V1.0.4** 增加AmsterdamUMCdb V1.0.2、PIC V1.1.0、SiCdb V1.0.5三个数据集的安装支持，此版本客户端中三个数据集的安装支持仅有Base模块（官方仅只有Base或干脆未提供PG安装方法），对应的BDMCC模块后续版本客户端完善；新增MIMIC-III V1.4、MIMIV-III CareVue V1.4、MIMIC-IV V2.0、MIMIC-IV V2.2数据集中BDMCC模块的一些干预措施字段（例如是否使用白蛋白、RRT等），使用时仅需单独升级BDMCC模块即可，无需重复安装对应的Base和Concepts模块。
