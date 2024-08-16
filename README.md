@@ -107,6 +107,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-III-CareVue | V1.4   | mimic-iii-clinical-database-carevue-subset-1.4               |
   | MIMIC-IV          | V2.0   | mimic-iv-2.0                                                 |
   | MIMIC-IV          | V2.2   | mimic-iv-2.2                                                 |
+  | MIMIC-IV          | V3.0   | mimic-iv-3.0                                                 |
   | MIMIC-IV-ED       | V2.2   | mimic-iv-ed-2.2                                              |
   | MIMIC-IV-Note     | V2.2   | mimic-iv-note-deidentified-free-text-clinical-notes-2.2      |
   | eICU              | V2.0   | eicu-collaborative-research-database-2.0                     |
@@ -143,6 +144,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-III-CareVue | V1.4   | 38 GB       | 3 GB         | 5 GB         |
   | MIMIC-IV          | V2.0   | 99 GB       | 9 GB         | 5 GB         |
   | MIMIC-IV          | V2.2   | 100 GB      | 9 GB         | 5 GB         |
+  | MIMIC-IV          | V3.0   | 100 GB      | 9 GB         | 5 GB         |
   | MIMIC-IV-ED | V2.2   | 5 GB（ED模块）     |              |              |
   | MIMIC-IV-Note | V2.2   | 9 GB（Note模块） |              |              |
   | eICU              | V2.0   | 55 GB       | 6 GB         |              |
@@ -166,6 +168,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | mimic3_carevue          | MIMIC-III-CareVue | V1.4   | 22 min           | 24 min       | 5 min        |
   | mimic4                  | MIMIC-IV          | V2.0   | 54 min           | 55 min       | 12 min       |
   | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min           | 54 min       | 12 min       |
+  | mimic4_v30              | MIMIC-IV          | V3.0   | 1 h 5 min        | 1 h 5 min    | 20 min       |
   | mimic4_v22              | MIMIC-IV-ED       | V2.2   | 30 s（ED模块）    |              |              |
   | mimic4_v22              | MIMIC-IV-Note     | V2.2   | 3 min（Note模块） |              |              |
   | eicu                    | eICU              | V2.0   | 15 min           |              |              |
@@ -195,10 +198,4 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
 </p>
 
 ## 7 更新日志
-- **V1.0.7** 增加HiRID V1.1.1和SICdb V1.0.6数据集的一键安装;增加对今后所有版本(目前V1.0.5和V1.0.6)的SICdb数据集Deserialize Raw Data的自动提取并写入PostgreSQL (PG)功能，将SICdb中关于Offset的字段统一风格为小写(Offset为PG保留字段)，故若使用BDMCC V1.0.7之前的版本安装了SICdb数据集，请务必使用V1.0.7及其之后的新版BDMCC重新安装SICdb数据集;增加MIMIC系列数据集的BDMCC模块增强型表单的在PG中字段的注释功能，增加BDMCC客户端中字段的搜索查询模块，V1.0.7及其之后的新版BDMCC客户只需重新安装MIMIC系列数据集(MIMIC-1、MIMIC-Ill-CareVue、MIMIC-IV)的BDMCC模块即可使用新功能，无需重新安装Base和Concepts模块。
-- **V1.0.6** 增加INSPIRE V1.2数据的一键安装。
-- **V1.0.5** 增加MIMIC-IV V2.2数据集的ED、Note模块的一键安装（需要首先至少完成MIMIC-IV数据集中Base模块的安装方可执行ED、Note的安装）；增加显示数据集官网、数据源文件子文件夹路径提示功能。
-- **V1.0.4** 增加AmsterdamUMCdb V1.0.2、PIC V1.1.0、SiCdb V1.0.5三个数据集的安装支持，此版本客户端中三个数据集的安装支持仅有Base模块（官方仅只有Base或干脆未提供PG安装方法），对应的BDMCC模块后续版本客户端完善；新增MIMIC-III V1.4、MIMIV-III CareVue V1.4、MIMIC-IV V2.0、MIMIC-IV V2.2数据集中BDMCC模块的一些干预措施字段（例如是否使用白蛋白、RRT等），使用时仅需单独升级BDMCC模块即可，无需重复安装对应的Base和Concepts模块。
-- **V1.0.3** 更新MIMIC系列数据集安装代码（主要是Concepts相关代码），与MIT官方保持同步（更新至2024-1-1）；增加对MIMIC-IV V2.2数据集的支持；增加MIMIC-III V1.4、MIMIC-III-CareVue V1.4的BDMCC增强表单；增加网络故障时相关信息的提示；优化云连接获取逻辑（云链接timeout阈值为30s，增加全国/全球动态IP加速）；增加数据集文件校验，以及Base、Concepts、BDMCC模块单独校验功能。
-- **V1.0.2** 修复MIMIC-IV V2.0数据集下的BDMCC模块的bdmcc_population表单安装至Concepts模块下（mimic_derived模式下）的bug；优化首次启动时PG用户设置显示标签。
-- **V1.0.1** 支持MIMIC-III-Demo V1.4、MIMIC-III V1.4、MIMIC-III-CareVue V1.4、MIMIC-IV V2.0、eICU V2.0数据集安装。其中MIMIC-IV V2.0含增强型系列表单BDMCC（目前MIMIC-IV V2.0只包含bdmcc_population。MIMIC-III V1.4、MIMIC-III-CareVue V1.4暂无BDMCC系列表单，后续会陆续更新），可有效减少后期R语言代码。
+- 详见BDMCC软件更新日志菜单
