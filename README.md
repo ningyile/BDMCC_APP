@@ -150,7 +150,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-IV          | V3.1   | 130 GB      | 9 GB         | 5 GB         |
   | MIMIC-IV-ED | V2.2   | 5 GB（ED模块）     |              |              |
   | MIMIC-IV-Note | V2.2   | 9 GB（Note模块） |              |              |
-  | eICU              | V2.0   | 55 GB       | 6 GB         |              |
+  | eICU              | V2.0   | 62 GB       | 6 GB         | 9 GB         |
   | AmsterdamUMCdb    | V1.0.2 | 228 GB      |              |              |
   | PIC               | V1.1.0 | 5 GB        |              |              |
   | SICdb             | V1.0.5 | 219 GB      |              |              |
@@ -176,7 +176,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | mimic4_v31              | MIMIC-IV          | V3.0   | 1 h 5 min        | 1 h 5 min    | 20 min       |
   | mimic4_v22              | MIMIC-IV-ED       | V2.2   | 30 s（ED模块）    |              |              |
   | mimic4_v22              | MIMIC-IV-Note     | V2.2   | 3 min（Note模块） |              |              |
-  | eicu                    | eICU              | V2.0   | 15 min           |              |              |
+  | eicu                    | eICU              | V2.0   | 15 min           | 30 min       | 2h 35 min    |
   | amsterdamumcdb          | AmsterdamUMCdb    | V1.0.2 | 1 h 26 min       |              |              |
   | pic                     | PIC               | V1.1.0 | 3 min            |              |              |
   | sicdb                   | SICdb             | V1.0.5 | 2 h 30 min       |              |              |
