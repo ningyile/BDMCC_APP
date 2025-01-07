@@ -108,13 +108,15 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-IV          | V2.0   | mimic-iv-2.0                                                 |
   | MIMIC-IV          | V2.2   | mimic-iv-2.2                                                 |
   | MIMIC-IV          | V3.0   | mimic-iv-3.0                                                 |
+  | MIMIC-IV          | V3.1   | mimic-iv-3.1                                                 |
   | MIMIC-IV-ED       | V2.2   | mimic-iv-ed-2.2                                              |
   | MIMIC-IV-Note     | V2.2   | mimic-iv-note-deidentified-free-text-clinical-notes-2.2      |
   | eICU              | V2.0   | eicu-collaborative-research-database-2.0                     |
   | AmsterdamUMCdb    | V1.0.2 | AmsterdamUMCdb-v1.0.2                                        |
   | PIC               | V1.1.0 | paediatric-intensive-care-database-1.1.0                     |
   | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.5 |
-  | SICdb             | V1.0.5 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.6 |
+  | SICdb             | V1.0.6 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.6 |
+  | SICdb             | V1.0.8 | salzburg-intensive-care-database-sicdb-a-freely-accessible-intensive-care-database-1.0.8 |
   | INSPIRE           | V1.2   | inspire-a-publicly-available-research-dataset-for-perioperative-medicine-1.2 |
   | HiRID             | V1.1.1 | hirid-a-high-time-resolution-icu-dataset-1.1.1 |
   
@@ -143,8 +145,9 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | MIMIC-III         | V1.4   | 75 GB       | 8 GB         | 5 GB         |
   | MIMIC-III-CareVue | V1.4   | 38 GB       | 3 GB         | 5 GB         |
   | MIMIC-IV          | V2.0   | 99 GB       | 9 GB         | 5 GB         |
-  | MIMIC-IV          | V2.2   | 100 GB      | 9 GB         | 5 GB         |
-  | MIMIC-IV          | V3.0   | 100 GB      | 9 GB         | 5 GB         |
+  | MIMIC-IV          | V2.2   | 102 GB      | 9 GB         | 5 GB         |
+  | MIMIC-IV          | V3.0   | 120 GB      | 9 GB         | 5 GB         |
+  | MIMIC-IV          | V3.1   | 130 GB      | 9 GB         | 5 GB         |
   | MIMIC-IV-ED | V2.2   | 5 GB（ED模块）     |              |              |
   | MIMIC-IV-Note | V2.2   | 9 GB（Note模块） |              |              |
   | eICU              | V2.0   | 55 GB       | 6 GB         |              |
@@ -152,6 +155,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | PIC               | V1.1.0 | 5 GB        |              |              |
   | SICdb             | V1.0.5 | 219 GB      |              |              |
   | SICdb             | V1.0.6 | 247 GB      |              |              |
+  | SICdb             | V1.0.8 | 303 GB      |              |              |
   | INSPIRE           | V1.2   | 13 GB       |              |              |
   | HiRID             | V1.1.1 | 解压75 GB，安装118 GB |              |              |
   
@@ -169,6 +173,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | mimic4                  | MIMIC-IV          | V2.0   | 54 min           | 55 min       | 12 min       |
   | mimic4_v22              | MIMIC-IV          | V2.2   | 54 min           | 54 min       | 12 min       |
   | mimic4_v30              | MIMIC-IV          | V3.0   | 1 h 5 min        | 1 h 5 min    | 20 min       |
+  | mimic4_v31              | MIMIC-IV          | V3.0   | 1 h 5 min        | 1 h 5 min    | 20 min       |
   | mimic4_v22              | MIMIC-IV-ED       | V2.2   | 30 s（ED模块）    |              |              |
   | mimic4_v22              | MIMIC-IV-Note     | V2.2   | 3 min（Note模块） |              |              |
   | eicu                    | eICU              | V2.0   | 15 min           |              |              |
@@ -176,6 +181,7 @@ sudo dpkg -i BDMCC_xxxxxx_amd64.deb
   | pic                     | PIC               | V1.1.0 | 3 min            |              |              |
   | sicdb                   | SICdb             | V1.0.5 | 2 h 30 min       |              |              |
   | sicdb_v106              | SICdb             | V1.0.6 | 2 h 35 min       |              |              |
+  | sicdb_v108              | SICdb             | V1.0.8 | 2 h 40 min       |              |              |
   | inspire                 | INSPIRE           | V1.2   | 4 min            |              |              |
   | hirid                   | HiRID             | V1.1.1 | 2 h 20 min       |              |              |
   
